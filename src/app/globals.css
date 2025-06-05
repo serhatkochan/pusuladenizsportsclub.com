@@ -1,0 +1,1226 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --primary: oklch(0.205 0 0); /* Koyu mavi - deniz teması */
+  --primary-dark: #0369a1;
+  --primary-light: #38bdf8;
+  --primary-light-hover: #7dd3fc;
+  --secondary: oklch(0.97 0 0);
+  --accent: oklch(0.97 0 0);
+  --water-light: #bae6fd;
+  --water-mid: #0ea5e9;
+  --water-dark: #0c4a6e;
+  --water-deep: #075985;
+  --water-surface: #e0f2fe;
+  --sand: #fef3c7;
+
+  /* Buton renk değişkenleri */
+  --btn-primary-bg: #0284c7;
+  --btn-primary-text: #ffffff;
+  --btn-primary-hover-bg: #0369a1;
+  --btn-primary-hover-text: #ffffff;
+
+  --btn-secondary-bg: transparent;
+  --btn-secondary-text: #ffffff;
+  --btn-secondary-border: #ffffff;
+  --btn-secondary-hover-bg: rgba(255, 255, 255, 0.1);
+  --btn-secondary-hover-text: #ffffff;
+  --btn-secondary-hover-border: #ffffff;
+  --radius: 0.625rem;
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.145 0 0);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.145 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0 0);
+  --primary-foreground: oklch(0.985 0 0);
+  --secondary-foreground: oklch(0.205 0 0);
+  --muted: oklch(0.97 0 0);
+  --muted-foreground: oklch(0.556 0 0);
+  --accent-foreground: oklch(0.205 0 0);
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: oklch(0.922 0 0);
+  --input: oklch(0.922 0 0);
+  --ring: oklch(0.708 0 0);
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: oklch(0.205 0 0);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --animate-marquee: marquee var(--duration) infinite linear;
+  --animate-marquee-vertical: marquee-vertical var(--duration) linear infinite;
+  @keyframes marquee {
+  from {
+    transform: translateX(0);
+    }
+  to {
+    transform: translateX(calc(-100% - var(--gap)));
+    }
+  }
+  @keyframes marquee-vertical {
+  from {
+    transform: translateY(0);
+    }
+  to {
+    transform: translateY(calc(-100% - var(--gap)));
+    }
+  }
+  @keyframes marquee {
+  from {
+    transform: translateX(0);
+    }
+  to {
+    transform: translateX(calc(-100% - var(--gap)));
+    }
+  }
+  @keyframes marquee-vertical {
+  from {
+    transform: translateY(0);
+    }
+  to {
+    transform: translateY(calc(-100% - var(--gap)));
+    }
+  }
+}
+
+/* Yazı gölgeleri */
+.text-shadow-sm {
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.text-shadow-md {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.text-shadow-lg {
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* Geçiş efektleri */
+.section-transition {
+  position: relative;
+}
+
+.section-transition::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  background: linear-gradient(to top, var(--background), transparent);
+  pointer-events: none;
+}
+
+.section-transition-wave {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: auto;
+  transform: translateY(1px);
+  filter: drop-shadow(0px -2px 2px rgba(0, 0, 0, 0.05));
+}
+
+/* Butonlar için özel stiller */
+.btn-primary {
+  background-color: var(--btn-primary-bg);
+  color: var(--btn-primary-text);
+  border-radius: 9999px;
+  padding: 0.75rem 2rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(2, 132, 199, 0.25);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: var(--btn-primary-hover-bg);
+  color: var(--btn-primary-hover-text);
+  box-shadow: 0 6px 12px rgba(2, 132, 199, 0.35);
+  transform: translateY(-3px);
+}
+
+.btn-primary:active {
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  background-color: var(--btn-secondary-bg);
+  color: var(--btn-secondary-text);
+  border: 2px solid var(--btn-secondary-border);
+  border-radius: 9999px;
+  padding: 0.75rem 2rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.btn-secondary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  transition: all 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+  z-index: -1;
+}
+
+.btn-secondary:hover::before {
+  left: 0;
+}
+
+.btn-secondary:hover {
+  background-color: var(--btn-secondary-hover-bg);
+  color: var(--btn-secondary-hover-text);
+  border-color: var(--btn-secondary-hover-border);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+  transform: translateY(-3px);
+}
+
+.btn-secondary:active {
+  transform: translateY(-1px);
+}
+
+/* Kartlar için gelişmiş hover efektleri */
+.card-hover {
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.card-hover::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, var(--water-light), var(--water-mid), var(--primary));
+  opacity: 0;
+  transition: all 0.5s ease;
+  z-index: 1;
+}
+
+.card-hover:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 15px 30px -5px rgba(12, 74, 110, 0.15), 0 10px 15px -5px rgba(12, 74, 110, 0.1);
+}
+
+.card-hover:hover::before {
+  opacity: 1;
+}
+
+/* Ayrıştırıcılar */
+.divider {
+  height: 2px;
+  width: 80px;
+  background: var(--primary);
+  margin: 1rem auto;
+  transition: width 0.8s ease;
+  position: relative;
+}
+
+.divider::before,
+.divider::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--primary-light);
+}
+
+.divider::before {
+  left: -6px;
+}
+
+.divider::after {
+  right: -6px;
+}
+
+.divider-light {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.divider-light::before,
+.divider-light::after {
+  background-color: white;
+}
+
+/* Animasyonlu section arka planları */
+.animated-bg {
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite;
+}
+
+.animated-bg-slow {
+  background-size: 200% 200%;
+  animation: gradientAnimation 25s ease infinite;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Görsel overlay efektleri */
+.img-overlay {
+  position: relative;
+  overflow: hidden;
+}
+
+.img-overlay::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, transparent 50%, rgba(12, 74, 110, 0.75) 100%);
+  transition: all 0.4s ease;
+  opacity: 0.7;
+}
+
+.img-overlay::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(12, 74, 110, 0.2);
+  z-index: 1;
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+.img-overlay:hover::after {
+  opacity: 0.9;
+}
+
+.img-overlay:hover::before {
+  opacity: 1;
+}
+
+.img-overlay img {
+  transition: transform 0.7s cubic-bezier(0.33, 1, 0.68, 1);
+}
+
+.img-overlay:hover img {
+  transform: scale(1.1) rotate(1deg);
+}
+
+/* Düz kaydırma için */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Section geçişleri */
+.section-overlap {
+  position: relative;
+  z-index: 1;
+  margin-top: -60px;
+}
+
+/* Okyanüs gradyanı - daha yumuşak ve doğal tonlar */
+.ocean-gradient {
+  background: linear-gradient(135deg, #0369a1, #0891b2, #0ea5e9);
+  box-shadow: inset 0 0 70px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+/* Arka plan deseni iyileştirildi */
+.ocean-gradient::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.07;
+  background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h20v20H0V0zm10 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4z' fill='%23ffffff' fill-opacity='0.9'/%3E%3C/svg%3E");
+  background-size: 20px 20px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.ocean-gradient-vertical {
+  background: linear-gradient(to bottom, var(--water-deep), var(--primary), var(--water-light));
+  box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.1);
+}
+
+/* Alternatif deniz gradyanları için yeni sınıflar */
+.ocean-gradient-soft {
+  background: linear-gradient(to right, #0ea5e9, #38bdf8, #7dd3fc);
+  box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.05);
+}
+
+.ocean-gradient-deep {
+  background: linear-gradient(135deg, #075985, #0369a1, #0891b2);
+}
+
+/* Baloncuk animasyonları */
+.bubble-container {
+  pointer-events: none;
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.bubble {
+  position: absolute;
+  bottom: -10px;
+  width: 20px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  animation: bubble-rise 6s infinite ease-in;
+  opacity: 0.7;
+}
+
+.bubble:nth-child(1) {
+  left: 10%;
+  width: 15px;
+  height: 15px;
+  animation-delay: 0s;
+  animation-duration: 8s;
+}
+
+.bubble:nth-child(2) {
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  animation-delay: 2s;
+  animation-duration: 6s;
+}
+
+.bubble:nth-child(3) {
+  left: 80%;
+  width: 18px;
+  height: 18px;
+  animation-delay: 4s;
+  animation-duration: 7s;
+}
+
+.bubble:nth-child(4) {
+  left: 25%;
+  width: 12px;
+  height: 12px;
+  animation-delay: 1s;
+  animation-duration: 5s;
+}
+
+.bubble:nth-child(5) {
+  left: 65%;
+  width: 22px;
+  height: 22px;
+  animation-delay: 3s;
+  animation-duration: 9s;
+}
+
+.bubble:nth-child(6) {
+  left: 35%;
+  width: 8px;
+  height: 8px;
+  animation-delay: 2.5s;
+  animation-duration: 4s;
+}
+
+.bubble:nth-child(7) {
+  left: 85%;
+  width: 14px;
+  height: 14px;
+  animation-delay: 0.5s;
+  animation-duration: 7.5s;
+}
+
+@keyframes bubble-rise {
+  0% {
+    bottom: -10px;
+    opacity: 0.7;
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(20px);
+  }
+  100% {
+    bottom: 120%;
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+}
+
+/* Shine efekti */
+.shine {
+  position: relative;
+  overflow: hidden;
+}
+
+.shine::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.3) 100%
+  );
+  transform: skewX(-25deg);
+  z-index: 1;
+  transition: none;
+}
+
+.shine:hover::before {
+  animation: shine 0.75s;
+}
+
+@keyframes shine {
+  100% {
+    left: 125%;
+  }
+}
+
+/* Buton gibi davranması gereken diğer elementler */
+button, 
+a.btn-primary, 
+a.btn-secondary,
+.btn-like,
+[type="button"],
+[type="submit"],
+[type="reset"] {
+  cursor: pointer;
+}
+
+/* Buton gibi elementler için genel stil */
+.btn-like {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.btn-like:hover {
+  transform: translateY(-3px);
+}
+
+.btn-like:active {
+  transform: translateY(-1px);
+}
+
+/* İkon butonları için stil */
+.icon-btn {
+  background-color: white;
+  color: var(--primary);
+  border-radius: 9999px;
+  padding: 0.75rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.icon-btn:hover {
+  background-color: var(--primary);
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.icon-btn:active {
+  transform: translateY(-1px);
+}
+
+/* Dalgalı alt çizgi */
+.wavy-underline {
+  position: relative;
+}
+
+.wavy-underline::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 5px;
+  background-image: url("data:image/svg+xml,%3Csvg width='100' height='8' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 4C10 0 15 8 25 4C35 0 40 8 50 4C60 0 65 8 75 4C85 0 90 8 100 4' stroke='%2338bdf8' fill='none'/%3E%3C/svg%3E");
+  background-size: 100px 8px;
+  background-repeat: repeat-x;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.wavy-underline:hover::after {
+  opacity: 1;
+  bottom: -3px;
+}
+
+/* Yüzen animasyonlar */
+.floating {
+  animation: floating 4s ease-in-out infinite;
+}
+
+.floating-slow {
+  animation: floating 6s ease-in-out infinite;
+}
+
+.floating-fast {
+  animation: floating 3s ease-in-out infinite;
+}
+
+@keyframes floating {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* Fade-in animasyonları */
+.fade-in {
+  animation: fadeIn 1.5s ease-in;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Özel buton varyantları */
+.btn-primary.btn-white {
+  background-color: #ffffff;
+  color: var(--primary);
+}
+
+.btn-primary.btn-white:hover {
+  background-color: #f8fafc;
+  color: var(--primary-dark);
+}
+
+/* Mobil için hızlı erişim butonu */
+.quick-access-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--water-mid), var(--primary-dark));
+  box-shadow: 0 4px 12px rgba(2, 132, 199, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 30;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  overflow: hidden;
+}
+
+.quick-access-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, var(--primary-light), var(--primary));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 50%;
+}
+
+.quick-access-button:active {
+  transform: scale(0.95);
+}
+
+.quick-access-button:hover::before {
+  opacity: 1;
+}
+
+.quick-access-menu {
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  z-index: 29;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-end;
+}
+
+.quick-access-item {
+  background: white;
+  color: var(--primary);
+  padding: 10px 20px;
+  border-radius: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.quick-access-item:hover {
+  background: var(--primary-light);
+  color: white;
+  transform: translateX(-5px);
+}
+
+/* Mobil dokunmatik geliştirmeleri */
+@media (max-width: 768px) {
+  /* Dokunmatik için daha büyük tıklama alanları */
+  .btn-primary, .btn-secondary, button, .btn-like {
+    padding: 0.85rem 2rem;
+    min-height: 48px;
+  }
+
+  .card-hover {
+    transform: none;
+  }
+
+  .card-hover:active {
+    transform: scale(0.98);
+    transition: transform 0.1s ease;
+  }
+
+  /* Daha iyi görülebilir formlar */
+  input, textarea, select {
+    font-size: 16px !important; /* iOS'ta yakınlaştırmayı önler */
+    min-height: 48px;
+  }
+
+  /* Daha belirgin dokunmatik durumu */
+  a:active, button:active, .btn-like:active {
+    opacity: 0.8;
+    transform: scale(0.97);
+    transition: all 0.1s ease;
+  }
+
+  /* Shine efekti tıklama ile aktifleştir */
+  .shine:active::before {
+    animation: shine 0.75s;
+  }
+
+  /* Mobil menü butonları özel stilleri */
+  .ocean-menu-bg .group:active .bg-cyan-300 {
+    transform: scaleX(1) !important;
+  }
+
+  .ocean-menu-bg a:active {
+    transform: scale(0.98);
+  }
+
+  /* Deneme dersi buton efekti */
+  .ocean-menu-bg .btn-primary:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2) !important;
+  }
+
+  /* Carousel kontrollerini büyütme */
+  .swiper-button-next, .swiper-button-prev {
+    width: 48px !important;
+    height: 48px !important;
+  }
+
+  /* Gezinme için daha büyük alanlar */
+  nav a, .footer a {
+    padding: 12px 16px;
+    display: inline-block;
+  }
+}
+
+/* Mobil için yükleme performansı optimizasyonları */
+@media (max-width: 768px) {
+  .ocean-gradient::before {
+    background-size: 10px 10px;
+  }
+
+  .shine::before {
+    display: none;
+  }
+}
+
+/* Dalga animasyonu */
+.wave-animation {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 120px;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.wave-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.waves {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.waves svg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+}
+
+.waves use {
+  animation: wave-motion 25s cubic-bezier(.55,.5,.45,.5) infinite;
+  fill: rgba(255, 255, 255, 0.2);
+}
+
+.waves.back {
+  z-index: 1;
+}
+
+.waves.back use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 13s;
+  opacity: 0.5;
+}
+
+.waves.back use:nth-child(2) {
+  animation-delay: -5s;
+  animation-duration: 20s;
+  opacity: 0.3;
+}
+
+.waves.front {
+  z-index: 2;
+}
+
+.waves.front use:nth-child(1) {
+  animation-delay: -1s;
+  animation-duration: 7s;
+  opacity: 0.5;
+}
+
+.waves.front use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 10s;
+  opacity: 0.3;
+}
+
+@keyframes wave-motion {
+  0% {
+    transform: translate(-90px);
+  }
+  100% { 
+    transform: translate(85px);
+  }
+}
+
+/* Deniz yüzeyi efektleri */
+.surface-dots {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.15) 2px, transparent 2px);
+  background-size: 30px 30px;
+  animation: surface-dots-animation 10s linear infinite;
+}
+
+@keyframes surface-dots-animation {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 30px 30px;
+  }
+}
+
+/* Deniz menüsü arka plan gradyanı */
+.ocean-menu-bg {
+  background: linear-gradient(135deg, 
+    rgba(7, 89, 133, 1), 
+    rgba(3, 105, 161, 1), 
+    rgba(14, 165, 233, 1)
+  );
+  position: relative;
+  overflow: hidden;
+}
+
+.ocean-menu-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 50 Q25 25, 50 50 T100 50' stroke='%23ffffff' stroke-opacity='0.03' fill='none' stroke-width='2'/%3E%3C/svg%3E");
+  background-size: 100px 100px;
+  opacity: 0.5;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.fish-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.fish {
+  position: absolute;
+  font-size: 24px;
+  opacity: 0.5;
+  animation: fish-animation 20s linear infinite;
+}
+
+.fish:nth-child(1) {
+  top: 20%;
+  left: -5%;
+  animation-duration: 25s;
+  animation-delay: 0s;
+}
+
+.fish:nth-child(2) {
+  top: 45%;
+  left: -5%;
+  animation-duration: 20s;
+  animation-delay: 5s;
+}
+
+.fish:nth-child(3) {
+  top: 70%;
+  left: -5%;
+  animation-duration: 30s;
+  animation-delay: 10s;
+}
+
+@keyframes fish-animation {
+  0% {
+    transform: translateX(0) translateY(0) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.5;
+  }
+  90% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateX(110vw) translateY(20px) rotate(10deg);
+    opacity: 0;
+  }
+}
+
+/* Menü açılma animasyonu */
+.menu-reveal {
+  clip-path: circle(0% at 90% 5%);
+  transition: clip-path 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.menu-reveal-open {
+  clip-path: circle(150% at 90% 5%);
+}
+
+/* Animasyonlar */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes wave-motion {
+  0% {
+    transform: translate(-90px);
+  }
+  100% { 
+    transform: translate(85px);
+  }
+}
+
+@keyframes floating {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes surface-dots-animation {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 30px 30px;
+  }
+}
+
+@keyframes shine {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes bubble-rise {
+  0% {
+    transform: translateY(100%) scale(0.3);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(-1000%) scale(1.5);
+    opacity: 0;
+  }
+}
+
+@keyframes wave-loading {
+  0% { transform: translateX(0) scaleX(1); }
+  50% { transform: translateX(24px) scaleX(2); }
+  100% { transform: translateX(48px) scaleX(1); }
+}
+
+.animate-wave-loading {
+  animation: wave-loading 1.5s infinite ease-in-out;
+}
+
+/* Mobil menü baloncuk geliştirmeleri */
+.ocean-menu-bg .bubble-container {
+  z-index: 2;
+}
+
+.ocean-menu-bg .bubble {
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.3));
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.5), inset 0 0 2px rgba(255, 255, 255, 0.8);
+  animation-duration: 7s;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.ocean-menu-bg .bubble:nth-child(1) {
+  left: 10%;
+  width: 15px;
+  height: 15px;
+  animation-delay: 0s;
+  animation-duration: 9s;
+}
+
+.ocean-menu-bg .bubble:nth-child(2) {
+  left: 35%;
+  width: 10px;
+  height: 10px;
+  animation-delay: 1s;
+  animation-duration: 7s;
+}
+
+.ocean-menu-bg .bubble:nth-child(3) {
+  left: 60%;
+  width: 18px;
+  height: 18px;
+  animation-delay: 2s;
+  animation-duration: 8s;
+}
+
+.ocean-menu-bg .bubble:nth-child(4) {
+  left: 85%;
+  width: 12px;
+  height: 12px;
+  animation-delay: 0.5s;
+  animation-duration: 10s;
+}
+
+.ocean-menu-bg .bubble:nth-child(5) {
+  left: 20%;
+  width: 14px;
+  height: 14px;
+  animation-delay: 1.5s;
+  animation-duration: 8s;
+}
+
+.ocean-menu-bg .bubble:nth-child(6) {
+  left: 45%;
+  width: 8px;
+  height: 8px;
+  animation-delay: 2.5s;
+  animation-duration: 6s;
+}
+
+.ocean-menu-bg .bubble:nth-child(7) {
+  left: 75%;
+  width: 11px;
+  height: 11px;
+  animation-delay: 0.7s;
+  animation-duration: 9s;
+}
+
+.ocean-menu-bg .bubble:nth-child(8) {
+  left: 95%;
+  width: 9px;
+  height: 9px;
+  animation-delay: 3s;
+  animation-duration: 7.5s;
+}
+
+.ocean-menu-bg .bubble:nth-child(9) {
+  left: 5%;
+  width: 16px;
+  height: 16px;
+  animation-delay: 2s;
+  animation-duration: 8.5s;
+}
+
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.205 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.205 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.922 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.556 0 0);
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.556 0 0);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
