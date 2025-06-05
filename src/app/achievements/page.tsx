@@ -170,7 +170,7 @@ export default function AchievementsPage() {
             className="text-center mb-16"
           >
             <motion.h2 variants={fadeIn} className=" font-bold mb-4 text-blue-700">
-              <SparklesText className="text-5xl">Madalya Koleksiyonumuz</SparklesText>
+              <SparklesText className="text-3xl sm:text-4xl md:text-5xl">Madalya Koleksiyonumuz</SparklesText>
             </motion.h2>
             <motion.div 
               className="divider mx-auto mb-6"

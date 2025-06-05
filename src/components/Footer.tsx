@@ -137,9 +137,15 @@ export default function Footer() {
                    </Link>
                  </li>
                  <li>
+                   <Link href="/achievements" className="text-white/80 hover:text-white transition-colors duration-300 flex items-center group">
+                     <span className="w-2 h-2 bg-white/60 rounded-full mr-3 group-hover:bg-white transition-colors"></span>
+                     Başarılar
+                   </Link>
+                 </li>
+                 <li>
                    <Link href="/team" className="text-white/80 hover:text-white transition-colors duration-300 flex items-center group">
                      <span className="w-2 h-2 bg-white/60 rounded-full mr-3 group-hover:bg-white transition-colors"></span>
-                     Eğitmenler
+                     Ekibimiz
                    </Link>
                  </li>
                  <li>
