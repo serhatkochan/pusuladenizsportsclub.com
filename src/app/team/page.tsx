@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import Link from 'next/link';
+
 import Image from 'next/image';
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
@@ -130,7 +130,7 @@ export default function Team() {
               </div>
               <div className="p-8 bg-white">
                 <div className="space-y-4 text-gray-600 mb-6">
-                  <p>2010 yılından bu yana profesyonel yüzme dünyasında sayısız başarıya imza atan Enes Şirin, uluslararası açık su ve havuz yarışmalarında Türkiye'yi başarıyla temsil etmiştir. İstanbul Boğazı 6.5K yarışında birincilik, Aquamasters 10K'da birincilik ve Megisti Kaş 7.2K yarışında birincilik gibi prestijli başarılara imza atmıştır. Boğaz geçişleri ve uluslararası açık su maratonlarındaki deneyimini 2. Kademe Antrenörlük lisansı ile taçlandırarak, binlerce öğrencinin hayatına dokunmuştur. İstanbul ve Gebze bölgelerinde verdiği özel dersler ve grup eğitimleriyle, yüzlerce sporcunun gelişimine katkıda bulunmuştur. 2025 Ocak ayında tutkusunu bir adım öteye taşıyarak Pusula Deniz Spor Kulübü'nü kurmuş ve profesyonel spor eğitimi vizyonunu kendi kulübü çatısı altında sürdürmeye başlamıştır. Modern eğitim teknikleri ve kişiye özel antrenman programlarıyla, her yaştan sporcuya dünya standartlarında eğitim vermektedir.</p>
+                  <p>2010 yılından bu yana profesyonel yüzme dünyasında sayısız başarıya imza atan Enes Şirin, uluslararası açık su ve havuz yarışmalarında Türkiye&apos;yi başarıyla temsil etmiştir. İstanbul Boğazı 6.5K yarışında birincilik, Aquamasters 10K&apos;da birincilik ve Megisti Kaş 7.2K yarışında birincilik gibi prestijli başarılara imza atmıştır. Boğaz geçişleri ve uluslararası açık su maratonlarındaki deneyimini 2. Kademe Antrenörlük lisansı ile taçlandırarak, binlerce öğrencinin hayatına dokunmuştur. İstanbul ve Gebze bölgelerinde verdiği özel dersler ve grup eğitimleriyle, yüzlerce sporcunun gelişimine katkıda bulunmuştur. 2025 Ocak ayında tutkusunu bir adım öteye taşıyarak Pusula Deniz Spor Kulübü&apos;nü kurmuş ve profesyonel spor eğitimi vizyonunu kendi kulübü çatısı altında sürdürmeye başlamıştır. Modern eğitim teknikleri ve kişiye özel antrenman programlarıyla, her yaştan sporcuya dünya standartlarında eğitim vermektedir.</p>
                 </div>
                 <div>
                   <h4 className="text-sm text-gray-500 mb-3">Uzmanlık Alanları:</h4>
@@ -182,21 +182,21 @@ export default function Team() {
               {
                 name: "İdil Melis Pehlivan",
                 title: "Yüzme Eğitmeni & Cankurtaran Eğitmeni",
-                bio: "2015 yılından bu yana yüzme sporuna tutkuyla bağlı olan İdil, açık su yarışmalarında önemli başarılara imza atmıştır. Aquamasters 10K yarışında birincilik, Fethiye 6K'da birincilik, Zonguldak Ereğli 3K'da birincilik ve Balıkesir 3K'da birincilik gibi prestijli derecelere sahiptir. Çeşitli organizasyonlarda defalarca kürsüye çıkarak başarılarını taçlandırmıştır. Cankurtaranlık belgesi ile hem yüzme eğitmenliği hem de güvenlik eğitimi vermektedir. Şu an antrenörlük kademesini yükseltmeye hazırlanarak, profesyonel gelişimine devam etmektedir.",
+                bio: "2015 yılından bu yana yüzme sporuna tutkuyla bağlı olan İdil, açık su yarışmalarında önemli başarılara imza atmıştır. Aquamasters 10K yarışında birincilik, Fethiye 6K&apos;da birincilik, Zonguldak Ereğli 3K&apos;da birincilik ve Balıkesir 3K&apos;da birincilik gibi prestijli derecelere sahiptir. Çeşitli organizasyonlarda defalarca kürsüye çıkarak başarılarını taçlandırmıştır. Cankurtaranlık belgesi ile hem yüzme eğitmenliği hem de güvenlik eğitimi vermektedir. Şu an antrenörlük kademesini yükseltmeye hazırlanarak, profesyonel gelişimine devam etmektedir.",
                 image: "/images/idil-1.jpg",
                 specialties: ["Yüzme Eğitmenliği", "Cankurtaranlık Eğitimi", "Açık Su Yüzme", "Güvenlik Eğitimi"]
               },
               {
                 name: "Burak Öndüç",
                 title: "Yüzme Eğitmeni & Performans Koçu",
-                bio: "2016 yılından bu yana yüzme sporunda aktif olarak yer alan Burak, açık su yarışmalarında etkileyici bir başarı geçmişine sahiptir. Bodrum yarışmalarında birincilik ve üçüncülük, Antalya'da ikincilik ve üçüncülük, Marmaris'te birincilik ve ikincilik, Ereğli'de ikincilik ve Gölcük'te birincilik ve ikincilik dereceleri elde etmiştir. Yarışmalarda elde ettiği kürsü deneyimlerini, şimdi Pusula Deniz Spor Kulübü'nde genç sporculara aktarmaktadır. Özel ve grup dersleri vererek, sporcuların teknik gelişimine ve performans artışına odaklanmaktadır.",
+                bio: "2016 yılından bu yana yüzme sporunda aktif olarak yer alan Burak, açık su yarışmalarında etkileyici bir başarı geçmişine sahiptir. Bodrum yarışmalarında birincilik ve üçüncülük, Antalya&apos;da ikincilik ve üçüncülük, Marmaris&apos;te birincilik ve ikincilik, Ereğli&apos;de ikincilik ve Gölcük&apos;te birincilik ve ikincilik dereceleri elde etmiştir. Yarışmalarda elde ettiği kürsü deneyimlerini, şimdi Pusula Deniz Spor Kulübü&apos;nde genç sporculara aktarmaktadır. Özel ve grup dersleri vererek, sporcuların teknik gelişimine ve performans artışına odaklanmaktadır.",
                 image: "/images/burak-onduc-1.jpg",
                 specialties: ["Yüzme Eğitmenliği", "Performans Koçluğu", "Açık Su Yüzme", "Teknik Gelişim"]
               },
               {
                 name: "Burak Kırman",
                 title: "Yüzme Eğitmeni & Yarışma Koçu",
-                bio: "2011 yılında başladığı yüzme kariyerinde ulusal çapta önemli başarılara imza atmıştır. 7 yaşında 50 metre sabit ve 50 metre sırtta İstanbul birinciliği, Ankara'da 100 metrede rekor kırma başarısı ve 8 yaşında Manisa üçüncülüğü elde etmiştir. 14 yaşında Tekirdağ birinciliği kazanmış, Gaziantep'te düzenlenen Türkiye şampiyonasında 1500 metrede Türkiye 8.'liği ve 800 metrede Türkiye 11.'liği gibi önemli dereceler elde etmiştir. 2022'den bu yana açık su yarışmalarında aktif olarak yarışmakta ve 2025'te aldığı Cankurtaranlık belgesi ile genç sporculara rehberlik etmektedir.",
+                bio: "2011 yılında başladığı yüzme kariyerinde ulusal çapta önemli başarılara imza atmıştır. 7 yaşında 50 metre sabit ve 50 metre sırtta İstanbul birinciliği, Ankara&apos;da 100 metrede rekor kırma başarısı ve 8 yaşında Manisa üçüncülüğü elde etmiştir. 14 yaşında Tekirdağ birinciliği kazanmış, Gaziantep&apos;te düzenlenen Türkiye şampiyonasında 1500 metrede Türkiye 8.&apos;liği ve 800 metrede Türkiye 11.&apos;liği gibi önemli dereceler elde etmiştir. 2022&apos;den bu yana açık su yarışmalarında aktif olarak yarışmakta ve 2025&apos;te aldığı Cankurtaranlık belgesi ile genç sporculara rehberlik etmektedir.",
                 image: "/images/burak-kirman-1.jpg",
                 specialties: ["Yüzme Eğitmenliği", "Yarışma Koçluğu", "Açık Su Yüzme", "Performans Gelişimi"]
               }

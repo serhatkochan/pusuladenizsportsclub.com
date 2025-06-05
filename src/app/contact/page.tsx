@@ -2,8 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import Link from 'next/link';
-import { IoMdCheckmarkCircleOutline } from 'react-icons/io';
+
 const staggerContainer = {
   hidden: { opacity: 0 },
   visible: {

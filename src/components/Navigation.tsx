@@ -74,7 +74,7 @@ export default function Navigation() {
                 alt="Pusula Deniz Spor Kulübü" 
                 width={200}
                 height={80}
-                className={`${scrolled ? 'h-14' : 'h-16'} transition-all duration-300 object-contain ${
+                className={`${scrolled ? 'h-12 sm:h-14' : 'h-14 sm:h-16'} transition-all duration-300 object-contain ${
                   scrolled ? '' : 'brightness-0 invert'
                 }`} 
               />
@@ -82,7 +82,7 @@ export default function Navigation() {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-1">
+          <nav className="hidden md:flex items-center space-x-1">
             {menuItems.map((item, index) => (
               <motion.div
                 key={index}
@@ -130,7 +130,7 @@ export default function Navigation() {
           </nav>
 
           {/* Mobile Menu Button */}
-          <div className="lg:hidden relative z-50">
+          <div className="md:hidden relative z-50">
             <button 
               onClick={toggleMenu}
               className={`flex flex-col justify-center items-center w-10 h-10 rounded-full ${
@@ -168,7 +168,7 @@ export default function Navigation() {
 
       {/* Mobile Menu */}
       <div 
-        className={`fixed inset-0 lg:hidden z-40 menu-reveal overflow-hidden ${isOpen ? 'menu-reveal-open' : ''}`}
+        className={`fixed inset-0 md:hidden z-40 menu-reveal overflow-hidden ${isOpen ? 'menu-reveal-open' : ''}`}
       >
         <motion.div 
           className="w-full h-full ocean-menu-bg flex flex-col"
@@ -532,7 +532,7 @@ export default function Navigation() {
                   <div className="relative rounded-xl overflow-hidden group shine">
                     <Link 
                       href={item.href}
-                      className="block py-2 px-3 text-base sm:text-xl font-medium text-white text-center relative overflow-hidden transition-all duration-300 z-10"
+                      className="block py-3 px-4 text-lg sm:text-xl md:text-2xl font-medium text-white text-center relative overflow-hidden transition-all duration-300 z-10"
                       onClick={() => setIsOpen(false)}
                     >
                       <span className="relative z-10">{item.name}</span>
@@ -557,7 +557,7 @@ export default function Navigation() {
                 <div className="relative overflow-hidden shine rounded-full inline-block">
                   <Link 
                     href="/contact" 
-                    className="btn-primary btn-white text-blue-600 shadow-lg hover:shadow-xl transition-all duration-300 block text-sm sm:text-base py-2 px-4"
+                    className="btn-primary btn-white text-blue-600 shadow-lg hover:shadow-xl transition-all duration-300 block text-base sm:text-lg md:text-xl py-3 px-6"
                     onClick={() => setIsOpen(false)}
                   >
                     <motion.span 

@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 
 export default function Footer() {
@@ -48,16 +49,18 @@ export default function Footer() {
             >
               <div className="flex items-center mb-6">
                 <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mr-4 backdrop-blur-sm p-1">
-                  <img 
+                  <Image 
                     src="/images/logo.png" 
                     alt="Pusula Deniz Spor Kulübü Logo" 
+                    width={48}
+                    height={48}
                     className="w-full h-full object-contain brightness-0 invert"
                   />
                 </div>
                 <h3 className="text-2xl font-bold text-white">Pusula Deniz Spor Kulübü</h3>
               </div>
               <p className="text-white/90 text-lg leading-relaxed mb-6">
-                Kocaeli'nin en deneyimli yüzme eğitimi merkezi. Profesyonel antrenörlerimizle her yaş ve seviyeye uygun eğitim programları sunuyoruz.
+                Kocaeli&apos;nin en deneyimli yüzme eğitimi merkezi. Profesyonel antrenörlerimizle her yaş ve seviyeye uygun eğitim programları sunuyoruz.
               </p>
               
               {/* Sosyal Medya */}

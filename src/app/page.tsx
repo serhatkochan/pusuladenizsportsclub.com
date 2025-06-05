@@ -134,10 +134,7 @@ export default function Home() {
     threshold: 0.1
   });
 
-  const [testimonialRef] = useInView({
-    triggerOnce: true,
-    threshold: 0.1
-  });
+
 
   return (
     <main className="overflow-hidden">
