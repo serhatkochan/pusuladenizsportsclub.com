@@ -349,7 +349,7 @@ export default function Home() {
               animate={servicesInView ? { opacity: 1 } : {}}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              Pusula Deniz Spor Kulübü&apos;nde sunduğumuz profesyonel hizmetler
+              Pusula Deniz Spor Kulübü'nde sunduğumuz profesyonel hizmetler
             </motion.p>
           </div>
           

@@ -60,7 +60,7 @@ export default function Footer() {
                 <h3 className="text-2xl font-bold text-white">Pusula Deniz Spor Kulübü</h3>
               </div>
               <p className="text-white/90 text-lg leading-relaxed mb-6">
-                Kocaeli&apos;nin en deneyimli yüzme eğitimi merkezi. Profesyonel antrenörlerimizle her yaş ve seviyeye uygun eğitim programları sunuyoruz.
+                Kocaeli'nin en deneyimli yüzme eğitimi merkezi. Profesyonel antrenörlerimizle her yaş ve seviyeye uygun eğitim programları sunuyoruz.
               </p>
               
               {/* Sosyal Medya */}

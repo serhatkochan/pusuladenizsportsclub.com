@@ -91,7 +91,7 @@ export default function ServicesPage() {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.3 }}
           >
-            Pusula Deniz Spor Kulübü&apos;nde her yaş ve seviye için profesyonel yüzme eğitimi hizmetleri
+            Pusula Deniz Spor Kulübü'nde her yaş ve seviye için profesyonel yüzme eğitimi hizmetleri
           </motion.p>
         </div>
         
@@ -292,7 +292,7 @@ export default function ServicesPage() {
             <motion.p 
               className="text-xl text-gray-800 max-w-3xl mx-auto"
             >
-              Pusula&apos;da yüzme eğitim süreci nasıl işler?
+                                Pusula'da yüzme eğitim süreci nasıl işler?
             </motion.p>
           </motion.div>
 

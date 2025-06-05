@@ -3,7 +3,7 @@ import { ImageResponse } from 'next/og'
 
 export const runtime = 'edge'
 
-export const alt = 'Pusula Deniz Spor Kulübü - Kocaeli&apos;nin En İyi Yüzme Eğitimi Merkezi'
+export const alt = 'Pusula Deniz Spor Kulübü - Kocaeli\'nin En İyi Yüzme Eğitimi Merkezi'
 export const size = {
   width: 1200,
   height: 630,
@@ -56,7 +56,7 @@ export default async function Image() {
           <p tw="text-3xl text-center mb-5 max-w-4xl" style={{
             textShadow: '2px 2px 6px rgba(0,0,0,0.8), 1px 1px 3px rgba(0,0,0,0.9)',
           }}>
-            Kocaeli&apos;nin En İyi Yüzme Eğitimi Merkezi
+                         Kocaeli'nin En İyi Yüzme Eğitimi Merkezi
           </p>
           
           {/* Features */}

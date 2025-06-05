@@ -104,13 +104,13 @@ export default function About() {
             <motion.div variants={fadeIn}>
               <h2 className="text-3xl font-bold mb-6 text-blue-600 wavy-underline">Hikayemiz</h2>
               <p className="text-gray-700 mb-4 leading-relaxed">
-                Pusula Deniz Spor Kulübü, 2025 Ocak ayında deneyimli yüzücü ve antrenör Enes Şirin tarafından kurulmuştur. Kurucu Enes Şirin, 2010 yılından bu yana profesyonel yüzme dünyasında sayısız başarıya imza atmış, uluslararası açık su ve havuz yarışmalarında Türkiye&apos;yi başarıyla temsil etmiştir.
+                Pusula Deniz Spor Kulübü, 2025 Ocak ayında deneyimli yüzücü ve antrenör Enes Şirin tarafından kurulmuştur. Kurucu Enes Şirin, 2010 yılından bu yana profesyonel yüzme dünyasında sayısız başarıya imza atmış, uluslararası açık su ve havuz yarışmalarında Türkiye'yi başarıyla temsil etmiştir.
               </p>
               <p className="text-gray-700 mb-4 leading-relaxed">
-                İstanbul Boğazı 6.5K yarışında birincilik, Aquamasters 10K&apos;da birincilik ve Megisti Kaş 7.2K yarışında birincilik gibi prestijli başarılara imza atan Enes Şirin, Boğaz geçişleri ve uluslararası açık su maratonlarındaki deneyimini 2. Kademe Antrenörlük lisansı ile taçlandırmıştır.
+                İstanbul Boğazı 6.5K yarışında birincilik, Aquamasters 10K'da birincilik ve Megisti Kaş 7.2K yarışında birincilik gibi prestijli başarılara imza atan Enes Şirin, Boğaz geçişleri ve uluslararası açık su maratonlarındaki deneyimini 2. Kademe Antrenörlük lisansı ile taçlandırmıştır.
               </p>
               <p className="text-gray-700 leading-relaxed">
-                İstanbul ve Gebze bölgelerinde verdiği özel dersler ve grup eğitimleriyle yüzlerce sporcunun gelişimine katkıda bulunan Enes Şirin, tutkusunu bir adım öteye taşıyarak Pusula Deniz Spor Kulübü&apos;nü kurmuştur. Modern eğitim teknikleri ve kişiye özel antrenman programlarıyla, her yaştan sporcuya dünya standartlarında eğitim vermektedir.
+                İstanbul ve Gebze bölgelerinde verdiği özel dersler ve grup eğitimleriyle yüzlerce sporcunun gelişimine katkıda bulunan Enes Şirin, tutkusunu bir adım öteye taşıyarak Pusula Deniz Spor Kulübü'nü kurmuştur. Modern eğitim teknikleri ve kişiye özel antrenman programlarıyla, her yaştan sporcuya dünya standartlarında eğitim vermektedir.
               </p>
               
               <div className="mt-10">

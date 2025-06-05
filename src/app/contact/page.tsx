@@ -156,11 +156,11 @@ export default function Contact() {
                       <div className="space-y-2">
                         <div className="p-3 bg-blue-50 rounded-lg">
                           <p className="font-medium text-blue-700">📍 Şekerpınar Lokasyonu</p>
-                          <p className="text-gray-600 text-sm">Şekerpınar Perla Verde Spor Salonu</p>
+                          <p className="text-gray-600 text-sm">Şekerpınar Perla Verde Spor Salonu, Çayırova/Kocaeli</p>
                         </div>
                         <div className="p-3 bg-blue-50 rounded-lg">
                           <p className="font-medium text-blue-700">🏊‍♂️ Gebze Lokasyonu</p>
-                          <p className="text-gray-600 text-sm">Gebze Kapalı Olimpik Yüzme Havuzu</p>
+                          <p className="text-gray-600 text-sm">913/1. Sk. No:22, Güzeller, 41400 Gebze/Kocaeli</p>
                         </div>
                       </div>
                     </div>
@@ -223,23 +223,52 @@ export default function Contact() {
               </div>
             </motion.div>
 
-            {/* Map */}
+            {/* Maps */}
             <motion.div 
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
-              className="w-full h-[400px] lg:h-auto lg:min-h-[600px] rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300"
+              className="space-y-6"
             >
-              <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3009.8234567890123!2d29.3695011!3d40.862192!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cad96b0897d253%3A0x87068c3da1c5b7b6!2sPerla%20Verde%20Park!5e0!3m2!1str!2str!4v1656325855121!5m2!1str!2str" 
-                width="100%" 
-                height="100%" 
-                style={{ border: 0 }} 
-                allowFullScreen 
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Pusula Deniz Spor Kulübü - Perla Verde Park Lokasyonu"
-              ></iframe>
+              {/* Şekerpınar Lokasyonu Haritası */}
+              <div className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300">
+                <div className="p-4 bg-gradient-to-r from-blue-100 to-blue-200 text-blue-800 border-b border-blue-200">
+                  <h3 className="text-lg font-semibold">📍 Şekerpınar Lokasyonu</h3>
+                  <p className="text-blue-600 text-sm">Şekerpınar Perla Verde Spor Salonu, Çayırova/Kocaeli</p>
+                </div>
+                <div className="h-[300px]">
+                  <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3009.8234567890123!2d29.3695011!3d40.862192!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cad96b0897d253%3A0x87068c3da1c5b7b6!2sPerla%20Verde%20Park!5e0!3m2!1str!2str!4v1656325855121!5m2!1str!2str" 
+                    width="100%" 
+                    height="100%" 
+                    style={{ border: 0 }} 
+                    allowFullScreen 
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="Pusula Deniz Spor Kulübü - Şekerpınar Perla Verde Park Lokasyonu"
+                  ></iframe>
+                </div>
+              </div>
+
+              {/* Gebze Lokasyonu Haritası */}
+              <div className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300">
+                <div className="p-4 bg-gradient-to-r from-blue-50 to-blue-100 text-blue-800 border-b border-blue-200">
+                  <h3 className="text-lg font-semibold">🏊‍♂️ Gebze Lokasyonu</h3>
+                  <p className="text-blue-600 text-sm">913/1. Sk. No:22, Güzeller, 41400 Gebze/Kocaeli</p>
+                </div>
+                <div className="h-[300px]">
+                  <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3019.123456789!2d29.434523!3d40.802362!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cac82d6e2c8b5b%3A0x87068c3da1c5b7b7!2s913%2F1.%20Sk.%20No%3A22%2C%20G%C3%BCzeller%2C%2041400%20Gebze%2FKocaeli!5e0!3m2!1str!2str!4v1656325855128!5m2!1str!2str"
+                    width="100%" 
+                    height="100%" 
+                    style={{ border: 0 }} 
+                    allowFullScreen 
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="Pusula Deniz Spor Kulübü - Gebze Lokasyonu"
+                  ></iframe>
+                </div>
+              </div>
             </motion.div>
           </div>
         </div>
