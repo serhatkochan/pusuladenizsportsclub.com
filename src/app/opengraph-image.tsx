@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { ImageResponse } from 'next/og'
 
 export const runtime = 'edge'
@@ -32,7 +33,6 @@ export default async function Image() {
         {/* Content */}
         <div tw="relative z-10 w-full h-full flex flex-col items-center justify-center text-white p-8">
           {/* Logo */}
-            {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src={`${baseUrl}/images/logo.png`}
               alt="Pusula Deniz Spor Logo"

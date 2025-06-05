@@ -93,7 +93,7 @@ const ReviewCard = ({
   );
 };
 
-export function TestimonialsSection() {
+function TestimonialsSection() {
   return (
     <section className="py-20 bg-blue-50/50">
       <div className="container mx-auto max-w-6xl">
